@@ -13,6 +13,10 @@ function App() {
     setTables(data)
   }
 
+  function setLocalStorage(id) {
+    localStorage.setItem("IdTable", id)
+  }
+
   useEffect(() => {
     getTables()
   }, [])
@@ -25,11 +29,11 @@ function App() {
           return (
             <div key={item.id}>
               <Link
-                to="/"
+                to="/reservas"
                 style={{
                   color: 'black',
                 }}
-                onClick={() => alert('Mesa 1 Reservada')}
+                onClick={() => setLocalStorage(item.id)}
               >
                 <img src={mesa} className="logo-mesa" alt="React logo" />
                 <p>
