@@ -8,7 +8,7 @@ function App() {
   const [tables, setTables] = useState([])
 
   async function getTables() {
-    const { data } = await api.get('/all-reservas')
+    const { data } = await api.get('/all-tables')
 
     setTables(data)
   }
@@ -34,11 +34,8 @@ function App() {
                 <img src={mesa} className="logo-mesa" alt="React logo" />
                 <p>
                   <h2>{item.number}</h2>
-                  RESERVA:
-                  <br />
-                  Nome: {item.client_name}
-                  <br />
-                  Telefone: {item.fone}
+
+                  Status: {item.status}
                 </p>
               </Link>
             </div>
