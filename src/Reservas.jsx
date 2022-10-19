@@ -28,6 +28,11 @@ function Reservas() {
         <h2>  HOME </h2>
       </Link>
       <h2>RESERVAR MESAS:</h2>
+      <p>
+        Table ID:
+        {/* {localStorage.getItem('IdTable')} */}
+      </p>
+
       <div
         className="App"
         style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}
